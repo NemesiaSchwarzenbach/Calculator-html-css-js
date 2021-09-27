@@ -1,0 +1,47 @@
+body {
+    font-size: 15pt;
+}
+.barra {
+  background-color: darkslateblue;
+  width: 99%;
+  height: 50px;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  border: solid 2px black;
+}
+
+.norm {
+  background-color: plum;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  text-align: center;
+}
+
+.large {
+  background-color: plum;
+  text-align: center;
+  width: 92.5px;
+  height: 40px;
+  margin: 5px;
+}
+
+/*#clear {width: 92.5px;
+height: 40px;
+} 
+
+#eq {width: 92.5px;
+  height: 40px;
+}*/
+
+tbody {
+  background-color: plum;
+  border: solid 4px black;
+}
+
+.cuerpa  {border: solid 4px black;
+border-right: solid 3px black;
+ /* margin-right: 2px;*/
+  background-color: plum;
+} 

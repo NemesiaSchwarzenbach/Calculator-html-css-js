@@ -1,0 +1,134 @@
+// VARIABLES 
+function init() {
+var result = document.getElementById('barra');
+var lis = '';
+var primero;
+var segundo;
+var res = '';
+var sw;
+//nros
+var uno = document.getElementById('uno'); 
+uno.onclick = function(e) { result.textContent += '1';
+  lis += '1'
+} 
+var dos = document.getElementById('dos');
+dos.onclick = function(e) {result.textContent += '2';
+  lis += '2';
+}
+var tres = document.getElementById('tres');
+tres.onclick = function(e) {result.textContent += '3';
+  lis += '3';
+} 
+var cuatro = document.getElementById('cuatro');
+cuatro.onclick = function(e) {result.textContent += '4';
+  lis += '4';
+} 
+var cinco = document.getElementById('cinco');
+cinco.onclick = function(e) {result.textContent += '5';
+  lis += '5';
+} 
+var seis = document.getElementById('seis');
+seis.onclick = function(e) {result.textContent += '6';
+  lis += '6';
+} 
+var siete = document.getElementById('siete');
+siete.onclick = function(e) {result.textContent += '7';
+  lis += '7';
+} 
+var ocho = document.getElementById('ocho');
+ocho.onclick = function(e) {result.textContent += '8';
+  lis += '8';
+}
+var nueve = document.getElementById('nueve');
+nueve.onclick = function(e) {result.textContent += '9';
+  lis += '9';
+}
+var cero = document.getElementById('cero');
+cero.onclick = function(e) { result.textContent += '0';
+  lis += '0';
+} 
+
+//signos
+
+var mas = document.getElementById('mas');
+mas.onclick = function(e) {result.textContent += '+';
+  lis += '+';
+} 
+var menos = document.getElementById('menos');
+menos.onclick = function(e) {result.textContent += '-';
+  lis += '-';
+} 
+var por = document.getElementById('por');
+por.onclick = function(e) {result.textContent += '*';
+  lis += '*';
+} 
+var div = document.getElementById('div');
+div.onclick = function(e) {result.textContent += '/';
+  lis += '/';
+} 
+
+var per = document.getElementById('per');
+per.onclick = function(e) {result.textContent += '%';} 
+
+var eq = document.getElementById('eq');
+
+//clear
+var clear = document.getElementById('clear');
+clear.onclick = function(e) {result.textContent = '';
+  lis = ''
+} 
+var c = document.getElementById('c');
+c.onclick = function(e) {f = result.textContent.replace(/.$/, '')
+lis =f;
+result.textContent = f;
+} 
+
+
+//igual
+
+eq.onclick = function equ() {
+  if(lis.indexOf('+') > 0) {
+    sw = lis.indexOf('+');
+    primero = lis.substring(0, sw);
+    segundo = lis.split('+').pop();
+    res = parseFloat(primero) + parseFloat(segundo);
+  lis = primero + '+'+ segundo + '=' + res;
+  } 
+  
+  if(lis.indexOf('-') > 0) {
+    sw = lis.indexOf('-');
+    primero = lis.substring(0, sw);
+    segundo = lis.split('-').pop();
+    res = parseFloat(primero) - parseFloat(segundo);
+    
+  lis = primero + '-'+ segundo + '=' + res;} 
+  
+  
+  if(lis.indexOf('/') > 0) {
+    sw = lis.indexOf('/');
+    primero = lis.substring(0, sw);
+    segundo = lis.split('/').pop();
+    res = parseFloat(primero) / parseFloat(segundo);
+  lis = primero + '/'+ segundo + '=' + res;} 
+  
+  if(lis.indexOf('*') > 0) {
+    sw = lis.indexOf('*');
+    primero = lis.substring(0, sw);
+    segundo = lis.split('*').pop();
+    res = parseFloat(primero) * parseFloat(segundo);
+  lis = primero + '*'+ segundo + '=' + res;} 
+  
+  if(lis.indexOf('%') > 0) {
+    sw = lis.indexOf('%');
+    primero = lis.substring(0, sw);
+    segundo = lis.split('%').pop();
+    res = parseFloat(primero) / 100 *  parseFloat(segundo) / 100;
+  lis = primero + '%'+ segundo + '=' + res;} 
+  
+  result.textContent = lis;} 
+
+
+
+ 
+} 
+

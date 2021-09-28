@@ -49,6 +49,12 @@ cero.onclick = function(e) { result.textContent += '0';
 } 
 
 //signos
+var pt = document.getElementById('pt');
+pt.onclick = function(e) {
+  result.textContent += '.';
+  lis += '.';
+}
+
 
 var mas = document.getElementById('mas');
 mas.onclick = function(e) {result.textContent += '+';
@@ -68,14 +74,16 @@ div.onclick = function(e) {result.textContent += '/';
 } 
 
 var per = document.getElementById('per');
-per.onclick = function(e) {result.textContent += '%';} 
+per.onclick = function(e) {result.textContent += '%';
+  lis += '%';
+} 
 
 var eq = document.getElementById('eq');
 
 //clear
 var clear = document.getElementById('clear');
 clear.onclick = function(e) {result.textContent = '';
-  lis = ''
+  lis = '';
 } 
 var c = document.getElementById('c');
 c.onclick = function(e) {f = result.textContent.replace(/.$/, '')
@@ -118,12 +126,15 @@ eq.onclick = function equ() {
     res = parseFloat(primero) * parseFloat(segundo);
   lis = primero + '*'+ segundo + '=' + res;} 
   
-  if(lis.indexOf('%') > 0) {
+  
+   if(lis.indexOf('%') > 0) {
     sw = lis.indexOf('%');
     primero = lis.substring(0, sw);
     segundo = lis.split('%').pop();
-    res = parseFloat(primero) / 100 *  parseFloat(segundo) / 100;
+    x =   parseFloat(primero) *  parseFloat(segundo);
+    res = x / 100
   lis = primero + '%'+ segundo + '=' + res;} 
+
   
   result.textContent = lis;} 
 
